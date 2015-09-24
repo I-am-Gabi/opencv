@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gabriela/Documents/Fr/Unice/Project/Code/Convert/DisplayImage.c
+stdio.h
+-
+opencv2/opencv.hpp
+-
+
