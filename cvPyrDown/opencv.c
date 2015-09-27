@@ -3,6 +3,8 @@
 
 /*
 	Using cvPyrDown() to create a new image that is half the width and height of the input image
+	In OpenCV this is ac- complished by the function cvPyrDown(), which performs a Gaussian smooth 
+	and then removes every other line from an image. 
 */
 IplImage* doPyrDown(IplImage* in, int filter) {  
 
@@ -23,7 +25,7 @@ IplImage* doPyrDown(IplImage* in, int filter) {
  	cvPyrDown(in, out, filter);
 
  	return(out);
-}
+} 
 
 int main(int argc, char** argv)
 { 
@@ -31,7 +33,7 @@ int main(int argc, char** argv)
 	cvNamedWindow( "Display", CV_WINDOW_AUTOSIZE );//Create and Name the window 
 
 	cvShowImage( "Display", doPyrDown(image, CV_GAUSSIAN_5x5));//Display the image
-
+	 
 	cvWaitKey(0);//wait until user hits a key,if number is +ve then that much milli seconds image will wait to be closed
 	
 	cvDestroyWindow( "Display" );//Destroy and De-allocate memory
