@@ -3,6 +3,10 @@
 #include "highgui.h"
 /*
 http://linuxconfig.org/use-opencv-to-separate-rgb-image-into-red-green-and-blue-components#h3-usage
+ how to separate RGB image into R, G and B components. The program is written in low level programming 
+ as there are build in function in OpenCV which would make this code more efficient. However, this 
+ example deepens an understanding on how image is split into matrix of pixels and how can each pixel 
+ can be manipulated separately.
 */ 
 
 int main( int argc, char** argv )
@@ -39,9 +43,9 @@ int main( int argc, char** argv )
 	  for( j = 0 ; j < img->width ; j++ ) 
 	  {
 		  rED = pImg[i*img->widthStep + j*img->nChannels + 2];
-
 		  gREEN = pImg[i*img->widthStep + j*img->nChannels + 1];
 		  bLUE = pImg[i*img->widthStep + j*img->nChannels + 0];
+
 		  // RED
 		  pRed[i*img->widthStep + j*img->nChannels + 2] = rED;
 		  
